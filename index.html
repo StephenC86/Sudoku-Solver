@@ -3,32 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
   <title>Sudoku Solver</title>
   <script src="solver.js"></script>
 </head>
 
 <body>
   <div>
-  <table>
-    <tbody>
-       <tr>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-       </tr>
-       <tr>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-       </tr>
-       <tr>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-         <td><input type="number" max="9" min="1" maxlength="1" size="2"></td>
-       </tr>
-     </tbody>
-    </table>
-    <button>Solve</button>
+    <table id="grid" border="1" style="border-collapse: collapse;">
+      <caption>Sudoku Solver</caption>
+      <tbody>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+          <td class="cell"><input type="text" maxlength="1"></td>
+        </tr>
+      </tbody>
+      </table>
+    <div><button class="btn">Solve</button></div>
   </div>
 </body>
 </html>
